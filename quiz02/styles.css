@@ -5,6 +5,9 @@
     
 }
 
-table, th, tc {
-    border: 1px solid black;
+table, th, td {
+    border: 2.5px solid red;
+    padding: 5px;
+    
+    
 }
