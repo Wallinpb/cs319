@@ -6,7 +6,3 @@ th {
 tr:nth-child(even){
     background-color:yellow; 
 }
-tr:nth-child(odd){
-    background-color:dodgerblue;
-    color: white;
-}
