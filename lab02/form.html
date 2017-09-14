@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lnag = "en">
+    <head>
+    <meta charset="utf-8">
+    <link rel = "stylesheet" href="styles.css">
+    <title>List</title>
+    </head>
+    <body>
+        <form>
+            <table>
+                <tr>
+                    <td>Drink Type:</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="radio" name="coffeeDrink" value="americano">Americano</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="radio" name="coffeeDrink" value="cappuccino">Cappucino</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="radio" name="coffeeDrink" value="latte">Latte</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="radio" name="coffeeDrink" value="macchiato">Macchiato</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="radio" name="coffeeDrink" value="mocha">Mocha</td>
+                </tr>
+            </table>
+            
+            <p>Size:<br>
+            <select>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="Large">Large</option>
+            </select>
+            </p>
+
+            <table>
+                <tr>
+                    Flavors and Extras:
+                </tr>
+                
+                <tr>
+                    <td><input type="checkbox" name="extraEsp" value="shot">Extra Espresso Shot</td>
+                </tr>
+                
+                <tr>
+                    <td><input type="checkbox" name="extraCar" value="shot">Caramel Shot</td>
+                </tr>
+                
+                <tr>
+                    <td><input type="checkbox" name="extraHaz" value="shot">Hazelnut Shot</td>
+                </tr>
+                
+                <tr>
+                    <td><input type="checkbox" name="extraVan" value="shot">Vanilla Shot</td>
+                </tr>
+            </table><br>
+            Order For (name):
+            <input type="text" name="uName">
+            <br>
+            <br>
+            <input type="button" name="orderUP" value="Order!" class="order">
+            
+        </form>        
+    </body>
+</html>
