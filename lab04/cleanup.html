@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="utf-8">
+        <title>
+            Cleanup Lab 4
+        </title>
+    </head>
+    <body>
+        <script>
+            function cleanUpName() {
+                var first = document.getElementById("firstName").value;
+                var middle = document.getElementById("middleInitial").value;
+                var last = document.getElementById("lastName").value;
+                first = first.trim();
+                middle = middle.trim();
+                last = last.trim();
+                first = first.toUpperCase();
+                middle = middle.toUpperCase();
+                last = last.toUpperCase();
+                document.("fullName").innerHTML = first + " " + middle + ". " + last;
+            }
+        </script>
+        
+        <form>
+            <h1>Name Cleanup</h1>
+            <p>First Name: <br>
+            <input type = "text" name = "firstName" id = "firstName">
+            </p>
+            <p>Middle Initial: <br>
+            <input type = "text" name = "middleInitial" id = "middleInitial">
+            </p>
+            <p>Last Name: <br>
+            <input type = "text" name = "lastNAme" id = "lastName">
+            </p>
+            <input type="button" name="cleanup" id="cleanup" value="Cleanup Name" onclick="cleanUpName();">
+            <p>Full Name: <br><input type="text" id="fullName"></p>
+        </form>
+    </body>
+</html>
