@@ -13,7 +13,14 @@
         
         <form>
             <h1>Temperature Converter</h1>
-            <p>Temperature in Fahrenheit: </p>
+            <p>Temperature in Fahrenheit: <br>
+                <input type="text" id="tempInF" name="tempInF">
+            </p>
+            <p>
+                <input type="button" name="fToC" id="fToC" value="F to C" onclick="tempConvertFahrenheit">
+                <input type="button" name="fToC" id="fToC" value="F to C" onclick="tempConvertCelsius">
+            </p>
+            <p>Temperature in Celsius: <input type="text" id="tempInC" name="tempInC"></p>
         </form>
     </body>
 </html>
