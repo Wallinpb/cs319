@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="utf-8">
+        <title>Chapter 4 Exercise</title>
+    </head>
+    <body>
+        <script>
+//            function testfunction() {
+//                var myColor = document.getElementById("color1").value;
+//                var myText = document.example.exampleText.value;
+//                alert(myColor);
+//                alert(myText);
+//            }
+            function check() {
+                var first = document.example.exampleText.value;
+                var second = document.example.moreText.value;
+                first = first.trim();
+                second = second.trim();
+//              first = parseInt(first);
+//              second = parseInt(second);
+                document.getElementById("words").innerHTML= first + " " + second;
+            }
+        </script>
+        
+        <form name="example" id="example" action="#" method="get">
+            <p><b>First Input: </b><input type="text" name="exampleText" id="exampleText"></p>
+            <p><b>Second Input: </b><input type="text" name="moreText" id="moreText"></p>
+            <p><input type="button" name="go" id="go" value="Go!" onclick="check();"></p>
+            <p id = "words"></p>
+        </form>        
+    </body>
+</html>

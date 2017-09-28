@@ -2,32 +2,45 @@
 <html lang = "en">
     <head>
         <meta charset="utf-8">
-        <title>Chapter 4 Exercise</title>
+        <title>
+            Exercise 4
+        </title>
     </head>
     <body>
         <script>
-//            function testfunction() {
-//                var myColor = document.getElementById("color1").value;
-//                var myText = document.example.exampleText.value;
-//                alert(myColor);
-//                alert(myText);
-//            }
             function check() {
-                var first = document.example.exampleText.value;
-                var second = document.example.moreText.value;
+                var first = document.madLib.exampleText.value;
+                var second = document.madLib.moreText.value;
+                var colors = document.getElementById("color").value;
+                var animal = document.getElementById("Animal").value;
                 first = first.trim();
                 second = second.trim();
-//              first = parseInt(first);
-//              second = parseInt(second);
-                document.getElementById("words").innerHTML= first + " " + second;
+                document.getElementById("words").innerHTML= "Hello, my name is " + first + "!  I have " + second + " wonderful " + colors + " " + animal + "!";
             }
         </script>
         
-        <form name="example" id="example" action="#" method="get">
-            <p><b>First Input: </b><input type="text" name="exampleText" id="exampleText"></p>
-            <p><b>Second Input: </b><input type="text" name="moreText" id="moreText"></p>
-            <p><input type="button" name="go" id="go" value="Go!" onclick="check();"></p>
+        <form name="madLib" id="madLib" action="#" method="get">
+            <p>Name: <input type="text" name="exampleText" id="exampleText"></p>
+            <p>Number: <input type="text" name="moreText" id="moreText"></p>
+            
+            <p>
+                Color:<br>
+                <input type="radio" name="black" id="color" value="black">Black<br>
+                <input type="radio" name="brown" id="color" value="brown">Brown<br>
+                <input type="radio" name="orange" id="color" value="orange">Orange<br>
+            </p>
+            
+            <p>
+                Animal (plural):<br>
+                <select id="Animal">
+                    <option value="cats">Cats</option>
+                    <option value="dogs">Dogs</option>
+                    <option value="lizards">Lizards</option>
+                    <option value="kangaroos">Kangaroos</option>
+                </select>
+            </p>
+            <p><input type="button" name="story" id="story" value="Tell Story!" onclick="check();"></p>
             <p id = "words"></p>
-        </form>        
+        </form>
     </body>
 </html>
