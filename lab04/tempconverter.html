@@ -3,24 +3,44 @@
     <head>
         <meta charset="utf-8">
         <title>
-        
+            Temperature Converter
         </title>
     </head>
     <body>
         <script>
-        
+            function tempConvertFahrenheit() {
+                var tempFar;
+                var tempCel;
+                tempFar = parseFloat(document.tempForm.tempInF.value)
+                tempCel = (tempFar - 32) * (5/9);
+                document.tempForm.tempInC.value = tempCel;
+                document.getElementById("tempInC").style.backgroundColor = "green";
+                document.getElementById("tempInF").style.backgroundColor = "white";
+            }
+            
+            function tempConvertCelsius() {
+                var tempFar2;
+                var tempCel2;
+                tempCel = parseFloat(document.tempForm.tempInC.value)
+                tempFar = (tempCel * (9/5)) + 32;
+                document.tempForm.tempInF.value = tempFar;
+                document.getElementById("tempInF").style.backgroundColor = "green";
+                document.getElementById("tempInC").style.backgroundColor = "white";
+
+            }
         </script>
         
-        <form>
+        <form id="tempForm" name="tempForm" action="#" method="get">
             <h1>Temperature Converter</h1>
             <p>Temperature in Fahrenheit: <br>
                 <input type="text" id="tempInF" name="tempInF">
             </p>
             <p>
-                <input type="button" name="fToC" id="fToC" value="F to C" onclick="tempConvertFahrenheit">
-                <input type="button" name="fToC" id="fToC" value="F to C" onclick="tempConvertCelsius">
+                <input type="button" name="FToC" id="FToC" value="F to C" onclick="tempConvertFahrenheit();">
+                <input type="button" name="CToF" id="CToF" value="C to F" onclick="tempConvertCelsius();">
             </p>
-            <p>Temperature in Celsius: <input type="text" id="tempInC" name="tempInC"></p>
+            <p>Temperature in Celsius: <br>
+                <input type="text" id="tempInC" name="tempInC"></p>
         </form>
     </body>
 </html>
