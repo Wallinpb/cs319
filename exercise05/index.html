@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="utf-8">
+        <title>
+            Exercise 5
+        </title>
+    </head>
+    <body>
+        
+        <script>
+            function correctMonth() {
+                var num = document.monthForm.monthNum.value;
+                num = num.trim();
+                num = parseInt(num);
+                
+                if( (num > 12) || (num < 1) ){
+                    alert("I'm sorry, that number does not correspond with a month");
+                    return false;
+                } else if(num = 1){
+                    alert("January");
+                    return true;
+                } else if(num = 2){
+                    alert("February");
+                    return true;
+                } else if(num = 3){
+                    alert("March");
+                    return true;
+                } else if(num = 4){
+                    alert("April");
+                    return true;
+                } else if(num = 5){
+                    alert("May");
+                    return true;
+                } else if(num = 6){
+                    alert("June");
+                    return true;
+                } else if(num = 7){
+                    alert("July");
+                    return true;
+                } else if(num = 8){
+                    alert("August");
+                    return true;
+                } else if(num = 9){
+                    alert("September");
+                    return true;
+                } else if(num = 10){
+                    alert("October");
+                    return true;
+                }else if(num = 11){
+                    alert("November");
+                    return true;
+                } else if(num = 12){
+                    alert("December");
+                    return true;
+                } else {
+                    alert("Please input a number");
+                    return false;
+                }
+            }
+        </script>
+        
+        <form name="monthForm" id="monthForm" action="#" method="get">
+            <h1>Months</h1>
+            <p>Month Number: <input type="text" name="monthNum" id="monthNum"></p>
+            <input type="submit" name="submit" id="submit" value="Submit" onsubmit="correctMonth();">
+        </form>
+    </body>
+</html>
