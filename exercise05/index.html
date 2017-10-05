@@ -14,56 +14,53 @@
                 num = num.trim();
                 num = parseInt(num);
                 
-                if( (num > 12) || (num < 1) ){
-                    alert("I'm sorry, that number does not correspond with a month");
-                    return false;
-                } else if(num = 1){
+                if(num == "1"){
                     alert("January");
                     return true;
-                } else if(num = 2){
+                } else if(num == "2"){
                     alert("February");
                     return true;
-                } else if(num = 3){
+                } else if(num == "3"){
                     alert("March");
                     return true;
-                } else if(num = 4){
+                } else if(num == "4"){
                     alert("April");
                     return true;
-                } else if(num = 5){
+                } else if(num == "5"){
                     alert("May");
                     return true;
-                } else if(num = 6){
+                } else if(num == "6"){
                     alert("June");
                     return true;
-                } else if(num = 7){
+                } else if(num == "7"){
                     alert("July");
                     return true;
-                } else if(num = 8){
+                } else if(num == "8"){
                     alert("August");
                     return true;
-                } else if(num = 9){
+                } else if(num == "9"){
                     alert("September");
                     return true;
-                } else if(num = 10){
+                } else if(num == "10"){
                     alert("October");
                     return true;
-                }else if(num = 11){
+                }else if(num == "11"){
                     alert("November");
                     return true;
-                } else if(num = 12){
+                } else if(num == "12"){
                     alert("December");
                     return true;
                 } else {
-                    alert("Please input a number");
+                    alert("Please input a valid number");
                     return false;
                 }
             }
         </script>
         
-        <form name="monthForm" id="monthForm" action="#" method="get">
+        <form name="monthForm" id="monthForm" action="#" method="get" onsubmit= "return correctMonth();">
             <h1>Months</h1>
             <p>Month Number: <input type="text" name="monthNum" id="monthNum"></p>
-            <input type="submit" name="submit" id="submit" value="Submit" onsubmit="correctMonth();">
+            <input type="submit" name="submit" id="submit" value="Submit">
         </form>
     </body>
 </html>
