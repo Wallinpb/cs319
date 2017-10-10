@@ -9,12 +9,14 @@
     <body>
         <script>
             function colorVal(){
-                var colorValue = document.formOne.color.value;
-                colorValue = colorValue.trim();
-                if(colorValue == ""){
+                var colorFav = document.getElementById("color").value;
+                //colorFav = parseInt("colorFav");
+                colorFav = colorFav.trim();
+                if(colorFav == ""){
                     alert("Please Input a Color");
+                    document.formOne.color.focus();
                     return false;
-                } else if(isNaN(colorValue) == true){
+                } else if(isNaN(colorFav.value) == false){
                     alert("Please enter a Color as a non number")
                     document.formOne.color.focus();
                     return false;
