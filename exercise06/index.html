@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="utf-8">
+        <title>
+        
+        </title>
+    </head>
+    <body>
+        <script>
+            function formValidate(){
+                var number = document.formOne.numberGuessed.value;
+                var realNumber = 8;
+                number = number.trim();
+                if(number == "" || isNaN(number)){
+                    alert("Please input a Valid Number");
+                    document.formOne.numberGuessed.select();
+                    return false;
+                } else if(number > realNumber){
+                    alert("Guess Lower");
+                    document.formOne.numberGuessed.select();
+                    return false;
+                } else if(number < 1 || number > 10){
+                    alert("That's not between 1-10.  Input a good number!");
+                    document.formOne.numberGuessed.select();
+                    return false;
+                } else if(number < realNumber){
+                    alert("Guess Higher");
+                    document.formOne.numberGuessed.select();
+                    return false;
+                } else if(number == realNumber){
+                    alert("Congratulations, You Guessed The Number")
+                    return true;
+                } else{
+                    alert("I don't know how you messed up, but ya did");
+                    return false;}
+            }
+        </script>
+        
+        <form id="formOne" name="formOne" action="#" method="get" onsubmit="return formValidate();">
+            <p>Guess a Number Between 1 and 10:<br> <input type="text" id="numberGuessed" name="numberGuesed"></p>
+            <input type="submit" id="submit" name="submit" value="Guess">
+        </form>
+    </body>
+</html>
