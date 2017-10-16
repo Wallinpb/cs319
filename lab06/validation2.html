@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="utf-8">
+        <title>
+            Lab 6 Validation
+        </title>
+    </head>
+    <body>
+        <script>
+            function formValidate(){
+                //alert("The function has been properly called!");
+                var first = document.formOne.firstName.value;
+                var last = document.formOne.lastName.value;
+                var emailAddress = document.formOne.email.value;
+                var personAge = document.formOne.age.value;
+                first = first.trim();
+                last = last.trim();
+                emailAddress = emailAddress.trim();
+                personAge = personAge.trim();
+                if(first == ""){
+                    alert("Please input a First Name");
+                    document.formOne.firstName.focus();
+                    return false;
+                } else if(last == ""){
+                    alert("Please input a Last Name");
+                    document.formOne.lastName.focus();
+                    return false;
+                } else if(emailAddress == ""){
+                    alert("Please input an Email Address");
+                    document.formOne.email.focus();
+                    return false;
+                } else if((isNaN(age) || age == ""){
+                    alert("Please input a Valid Age");
+                    document.formOne.age.focus();
+                    return false;
+                } else if(email.endsWith("@uwec.edu")){
+                    alert("Please input an Email Address");
+                    document.formOne.age.focus();
+                    return false;
+                } else{
+                    return true;
+                }
+            }
+        </script>
+        
+        <form id="formOne" name="formOne" action="http://yoda.cs.uwec.edu/cs319/students/siasmj/echo.php" method="get" onsubmit="return formValidate();">
+            <p>First Name:<br> <input type="text" id="firstName" name="firstName"></p>
+            <p>Last Name:<br> <input type="text" id="lastName" name="lastName"></p>
+            <p>Email:<br><input type="text" id="email" name="email"></p>
+            <p>Age:<br><input type="text" id="age" name="age"></p>
+            <input type="submit" id="submit" name="submit" value="Submit">
+        </form>
+    </body>
+</html>
