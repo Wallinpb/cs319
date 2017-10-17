@@ -30,13 +30,13 @@
                     alert("Please input an Email Address");
                     document.formOne.email.focus();
                     return false;
-                } else if((isNaN(age) || age == ""){
+                } else if((isNaN(personAge) || personAge == ""){
                     alert("Please input a Valid Age");
                     document.formOne.age.focus();
                     return false;
                 } else if(email.endsWith("@uwec.edu")){
                     alert("Please input an Email Address");
-                    document.formOne.age.focus();
+                    document.formOne.email.focus();
                     return false;
                 } else{
                     return true;
