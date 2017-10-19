@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Midterm Program 1</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            function listFood() {
+                var first = document.getFood.ffood.value;
+                var second = document.getFood.sfood.value;
+                first = first.trim();
+                second = second.trim();
+                var combined = first + " and " + second + ".";
+                alert("Your favorite foods are: " + combined);
+            }
+        </script>
+        
+        <form name="getFood" id="getFood" action="#" method="get">
+            <p>First Favorite Food: <input type="text" name="ffood" id="ffood"></p>
+            <p>Second Favorite Food: <input type="text" name="sfood" id="sfood"></p>
+            <p><input type="button" name="submitFood" id="submitFood" value="Go!" onclick="listFood();"></p>
+        </form>
+    </body>
+</html>
